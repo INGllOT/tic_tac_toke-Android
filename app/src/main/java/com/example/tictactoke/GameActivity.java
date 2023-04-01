@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
+public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button[][] buttons = new Button[3][3];
 
@@ -41,7 +41,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.game_activity);
 
         textViewGracz1 = findViewById(R.id.text_view_p1);
         textViewGracz2 = findViewById(R.id.text_view_p2);

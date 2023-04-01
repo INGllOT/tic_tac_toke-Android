@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
 
     Button start, reset;
     TextView gracz1, gracz2;
@@ -26,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
-
+        setContentView(R.layout.welcome_activity);
 
 
         start = findViewById(R.id.startId);
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                             statsGracz1 += gracz1Intent;
                             statsGracz2 += gracz2Intnet;
 
-                            Toast.makeText(MainActivity.this, "gracz 1 "+ gracz1Intent + " " + "gracz 2 "+ gracz1Intent, Toast.LENGTH_LONG).show();
+                            Toast.makeText(WelcomeActivity.this, "gracz 1 "+ gracz1Intent + " " + "gracz 2 "+ gracz1Intent, Toast.LENGTH_LONG).show();
                             gracz1.setText("Gracz1: " + statsGracz1);
                             gracz2.setText("Gracz2: " + statsGracz2);
                         }
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                Intent intent = new Intent(WelcomeActivity.this, GameActivity.class);
                 mStartForResult.launch(intent);
             }
         });
