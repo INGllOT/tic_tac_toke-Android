@@ -4,62 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/darkbrown"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@color/szary">
+    tools:context=".MainActivity">
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="TIC_TAC_TOE"
-    android:layout_gravity="center"
-    android:textColor="@color/white"
-    android:textSize="50dp"
-    android:layout_marginTop="50dp"/>
-
-    <LinearLayout
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/uncial_antiqua"
+        android:text="Axe &amp; Shield"
+        android:textColor="@color/header_text_color"
+        android:textSize="56sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/gracz1"
+            android:id="@+id/round"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GRACZ 1: "
-            android:textSize="30dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="110dp"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="55dp"
+            android:fontFamily="@font/uncial_antiqua"
+            android:text="Rounds: 5"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/gracz2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GRACZ 2: "
-            android:layout_gravity="center"
-            android:textSize="30dp"
-            android:layout_marginTop="50dp"
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="start"
+                tools:srcCompat="@drawable/playerIcon1" />
+
+
+            <TextView
+                android:id="@+id/gracz1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="14dp"
+                android:fontFamily="@font/uncial_antiqua"
+                android:gravity="center_vertical"
+                android:text="P1"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/gracz2"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="6dp"
+                android:fontFamily="@font/uncial_antiqua"
+                android:gravity="center_vertical"
+                android:text="P2"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                tools:srcCompat="@drawable/playericon2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:layout_marginTop="44dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/priceView"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/uncial_antiqua"
+                android:text="Price"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/uncial_antiqua"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="enter text... "
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
 
         <Button
             android:id="@+id/startId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48dp"
+            android:backgroundTint="@color/button_background_color"
+            android:fontFamily="@font/uncial_antiqua"
             android:text="START"
-            android:layout_gravity="center"
-            android:layout_marginTop="150dp"
-            />
+            android:textSize="36sp" />
 
         <Button
             android:id="@+id/resetId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="50dp" android:layout_gravity="center"
-        android:text="RESTET"
-
-        />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/button_background_color"
+            android:fontFamily="@font/uncial_antiqua"
+            android:text="RESET"
+            android:textSize="36sp" />
 
     </LinearLayout>
+
 </LinearLayout>
